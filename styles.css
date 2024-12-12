@@ -70,11 +70,22 @@ h4 {
 }
 
 .latest-posts {
-    display: block;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the posts horizontally */
     margin-top: 40px;
 }
+.latest-posts h3 {
+    text-align: center;  /* Ensure the title text is centered */
+    font-size: 2.5em;  /* Increase the size of the title if needed */
+    margin-bottom: 30px;  /* Adds space between the header and posts */
+    width: 100%;  /* Ensure the title takes up full width for centering */
+    display: flex;
+    justify-content: center; /* Aligns the header in the center vertically */
+    height: 100vh;  /* Optional: Take the entire screen height */
+    align-items: center; /* Centers vertically */
+}
+
 
 .post {
     background-color: #fff;
