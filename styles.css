@@ -69,22 +69,11 @@ h4 {
     margin-top: 10px;
 }
 
-/* Latest Posts Section */
 .latest-posts {
-    margin-top: 40px;
-}
-
-.posts-header {
-    font-size: 2.5em; /* Larger font for the section header */
-    margin-bottom: 30px; /* Space between the header and the posts */
-    text-align: center;
-    color: #333;
-}
-
-.posts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between posts */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .post {
@@ -92,15 +81,14 @@ h4 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left for better readability */
 }
 
-.post h3 a {
+.post h4 a {
     text-decoration: none;
     color: #333;
 }
 
-.post h3 a:hover {
+.post h4 a:hover {
     color: #007BFF;
 }
 
