@@ -1,3 +1,4 @@
+theme: minimal-mistakes-jekyll
 name: 🚀 Deploy oby-wan's Blog & Resume to GitHub Pages
 
 on:
