@@ -1,0 +1,17 @@
+---
+---
+
+@import "minimal-mistakes/skins/neon"; // You can change "air" to any other skin if you like
+@import "minimal-mistakes"; // This imports the theme's main styles
+
+/* Add your custom styles below this line */
+---
+---
+
+@import "minimal-mistakes/skins/air";
+@import "minimal-mistakes";
+
+/* Custom styles */
+body {
+  background: #fffbe6;
+}
