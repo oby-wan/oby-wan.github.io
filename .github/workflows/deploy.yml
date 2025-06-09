@@ -1,0 +1,54 @@
+name: 🚀 Deploy oby-wan's Blog & Resume to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+# Best-practice permissions for Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevents concurrent deployments from clashing
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v4
+
+      # Uncomment this section if you use a static site generator (like Astro, Next.js, Hugo, Jekyll, etc.)
+      # - name: 🔧 Setup Node.js (if using Node-based generator)
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+
+      # - name: 📦 Install dependencies & build site (customize for your generator)
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      - name: 🗂️ Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📤 Upload blog/resume site (docs folder)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 🎉 Display deployment URL
+        run: echo "Your blog/resume site is live at ${{ steps.deployment.outputs.page_url }}"
