@@ -12,7 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # Site settings
 title: Tobhub
 description: >-
-  A simple website built with Jekyll.
+  For the latest in IT tutorials and discussions
 
 # Build settings
 theme: minima
