@@ -1,17 +1,26 @@
-# Site settings
-title: My Jekyll Site
-description: >- 
-  A simple website built with Jekyll.
+# Site settings for oby-wan.github.io
+
+# Domain (used by some plugins to force HTTPS)
+domain: oby-wan.github.io
+
+# The base hostname & protocol for your site
+url: "https://oby-wan.github.io"
+
+# If the site is served at the root (as with user/organization GitHub Pages), leave baseurl blank
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourdomain.com" # your site URL
+
+# Site settings
+title: Tobhub
+description: >-
+  A simple website built with Jekyll.
 
 # Build settings
 theme: minima
 
 # Author settings (optional)
 author:
-  name: Your Name
-  email: your@email.com
+  name: Toby the tech
+  email: toby@tobhub.com
 
 # Markdown processor
 markdown: kramdown
