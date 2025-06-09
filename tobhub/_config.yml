@@ -55,21 +55,6 @@ collections:
     output: true
     permalink: /docs/:path/
 
-# Navigation
-nav:
-  - title: "Home"
-    url: /
-  - title: "Blog"
-    url: /blog/
-  - title: "Portfolio"
-    url: /portfolio/
-  - title: "Docs"
-    url: /docs/
-  - title: "About"
-    url: /about/
-  - title: "Resume"
-    url: /resume/
-
 # Plugins
 plugins:
   - jekyll-feed
@@ -79,7 +64,6 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jemoji
-
 
 # SEO and Analytics
 google_analytics: "UA-XXXXXXXX-X"
@@ -196,4 +180,4 @@ strict_front_matter: false
 show_drafts: false
 safe: true
 
-# End of config
+# End of config 

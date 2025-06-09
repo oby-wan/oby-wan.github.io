@@ -1,11 +1,17 @@
 - title: "Home"
   url: /
 
+- title: "Blog"
+  url: /blog/
+
+- title: "Portfolio"
+  url: /portfolio/
+
+- title: "Docs"
+  url: /docs/
+
 - title: "About"
   url: /about/
 
-- title: "Contact"
-  url: /contact/
-
-- title: "Blog"
-  url: /year-archive/
+- title: "Resume"
+  url: /resume/
