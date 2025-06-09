@@ -80,6 +80,7 @@ plugins:
   - jekyll-include-cache
   - jemoji
 
+
 # SEO and Analytics
 google_analytics: "UA-XXXXXXXX-X"
 google_site_verification: "your-google-site-verification"
