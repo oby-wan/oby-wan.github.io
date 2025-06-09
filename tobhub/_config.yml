@@ -1,55 +1,198 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# ------------------------------------------
+#      Jekyll Advanced Configuration
+#    For Minimal Mistakes theme (v4.x+)
+# ------------------------------------------
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# Site Settings
+title: "Tobhub"
+subtitle: "Engineering, Code, and Career"
+description: "A cutting-edge Jekyll site built with Minimal Mistakes. Tech blogging, resume, and portfolio."
+name: "Tobhub"
+url: "https://oby-wan.github.io"   # Production URL
+baseurl: ""                        # No baseurl for user/organization sites
 
-# Build settings
-theme: minima
+# Theme and Appearance
+theme: minimal-mistakes-jekyll
+
+# Social and Branding
+logo: "/assets/images/logo.png"
+masthead_title: "Tobhub"
+repository: "oby-wan/oby-wan.github.io"
+github_username: "oby-wan"
+twitter:
+  username: "your_twitter"
+linkedin: "your-linkedin-url"
+instagram: "your_instagram"
+facebook: "your_facebook"
+youtube: "your_youtube_channel"
+email: "your@email.com"
+
+# Author details
+author:
+  name   : "Oby Wan"
+  avatar : "/assets/images/avatar.png"
+  bio    : "Systems engineer, developer, and lifelong learner. Blogging about code, data, and making things work."
+  location: "Planet Earth"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/oby-wan"
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      url: "https://twitter.com/your_twitter"
+    - label: "Resume"
+      icon: "fas fa-file-alt"
+      url: "/assets/ObyWan_Resume.pdf"
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Navigation
+nav:
+  - title: "Home"
+    url: /
+  - title: "Blog"
+    url: /blog/
+  - title: "Portfolio"
+    url: /portfolio/
+  - title: "Docs"
+    url: /docs/
+  - title: "About"
+    url: /about/
+  - title: "Resume"
+    url: /resume/
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jemoji
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# SEO and Analytics
+google_analytics: "UA-XXXXXXXX-X"
+google_site_verification: "your-google-site-verification"
+bing_site_verification: "your-bing-site-verification"
+twitter:
+  card: "summary_large_image"
+  username: "your_twitter"
+
+# Search (Lunr.js)
+search: true
+
+# Comments
+comments:
+  provider: "giscus"
+  giscus:
+    repo: "oby-wan/oby-wan.github.io"
+    repo_id: "YOUR_REPO_ID"
+    category: "General"
+    category_id: "YOUR_CATEGORY_ID"
+    mapping: "pathname"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    theme: "light"
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Defaults (Front Matter)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+      header:
+        overlay_image: "/assets/images/header-default.jpg"
+        overlay_filter: "0.3"
+        caption: "Tech & Engineering"
+
+# Permalinks & URLs
+permalink: /:categories/:title/
+collections_dir: collections
+
+# Exclude/Include
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .github
+  - .gitignore
+
+include:
+  - _pages
+  - _data
+  - _docs
+
+# Markdown and Syntax Highlighting
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    guess_lang: false
+    line_numbers: true
+
+# Advanced: Sass, Caching, and Performance
+sass:
+  style: compressed
+
+incremental: true
+future: true
+livereload: true
+
+# Advanced: Jekyll Archives
+jekyll-archives:
+  enabled: [categories, tags, year, month]
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+    year: archive-year
+    month: archive-month
+  permalinks:
+    category: '/categories/:name/'
+    tag: '/tags/:name/'
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+
+# Advanced: Minimal Mistakes Customization
+minimal_mistakes_skin: "air"
+breadcrumbs: true
+search_full_content: true
+read_time: true
+show_date: true
+related_posts_limit: 5
+share: true
+comments: true
+
+# Output settings
+lsi: false
+strict_front_matter: false
+show_drafts: false
+safe: true
+
+# End of config
