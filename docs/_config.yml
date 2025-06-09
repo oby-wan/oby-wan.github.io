@@ -1,1 +1,35 @@
+# Site settings
+title: My Jekyll Site
+description: >- 
+  A simple website built with Jekyll.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourdomain.com" # your site URL
 
+# Build settings
+theme: minima
+
+# Author settings (optional)
+author:
+  name: Your Name
+  email: your@email.com
+
+# Markdown processor
+markdown: kramdown
+
+# Permalinks
+permalink: pretty
+
+# Exclude these files and folders from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins (optional, minima theme may require jekyll-feed)
+plugins:
+  - jekyll-feed
+
+# Pagination (optional)
+paginate: 5
+paginate_path: "/page:num"
